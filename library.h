@@ -1,30 +1,11 @@
-class Media:
-    - string* title   (dynamically allocated)
-    - int rating
+#ifndef LIBARY_H_
+#define LIBARY_H_
+#include "book.h"
 
-    + constructor(title_string, rating_int)
-    + copy constructor (deep copy)
-    + assignment operator (deep copy)
-    + virtual destructor
-
-    + virtual function display()
-    + operator<< overload
-
-class Book inherits Media:
-    - string* author   (dynamic)
-
-    + constructor(title, rating, author)
-    + copy constructor
-    + assignment operator
-    + destructor
-
-    + override display()
-    + operator<< overload
-
-
-class Movie inherits Media:
-    - int duration
-
-    + constructor(title, rating, duration)
-    + override display()
-    + operator<< overload
+class Libary : public Book
+{
+public:    
+    void addBook();
+    int subtractBook(int a, int b);
+};
+#endif
